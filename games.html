@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUP4</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <p>PLAYCON</p>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="services">
+              <a href="games.html">GAMES</a>
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="playstation.html">PLAYSTATION</a></li>
+                <li><a href="nintendo.html">NINTENDO</a></li>
+                <li><a href="mobile.html">MOBILE GAMES</a></li>
+              </ul>
+            </li>
+            <li><a href="signup.html">SIGN UP</a></li>
+          </div>
+        </ul>
+      </nav>
+
+      
+      <video autoplay muted loop id="background-video">
+        <source src="bg.mp4" type="video/mp4">
+      </video>
+
+
+      <div id="chuck" class="hcg-slider">
+        <div class="hcg-slide-container">
+            <div class="hcg-slider-body">
+                <a class="hcg-slides animated" style="display:block">
+                    <span class="hcg-slide-number">1/5</span>
+                    <img src="https://html-generator.com/uploads/images/2022/10/14/48362MMUPWDO6V6.jpg" alt="48362MMUPWDO6V6.jpg">
+                    <span class="hcg-slide-text">48362MMUPWDO6V6.jpg</span>
+                </a>
+            </div>
+        </div>
+        </div>
+
+        <script>
+            (function(){
+            //If you want to include more images, add the link name and URL of the image in the array list below.
+                let images_list = [
+                    {"url":"https://html-generator.com/uploads/images/2022/10/14/48362MMUPWDO6V6.jpg","name":"48362MMUPWDO6V6.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/10/14/54822DJOTZO3ND9.jpg","name":"54822DJOTZO3ND9.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/10/14/58637KXAIVMKS13.jpg","name":"58637KXAIVMKS13.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/10/14/64086R9M0QQDUO0.jpg","name":"64086R9M0QQDUO0.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/10/14/72400HS7OUI5UA7.jpg","name":"72400HS7OUI5UA7.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/10/14/75319IJMXAQ6_ZC.jpg","name":"75319IJMXAQ6_ZC.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/10/14/779606IPCJVBYQT.jpg","name":"779606IPCJVBYQT.jpg","link":""},
+                    {"url":"https://html-generator.com/uploads/images/2022/10/14/79651CUN_6ZS0HH.jpg","name":"79651CUN_6ZS0HH.jpg","link":""}
+                ];
+            
+                let slider_id = document.querySelector("#chuck");
+            
+                // append all images
+                let dots_div = "";
+                let images_div = "";
+                for (let i = 0; i < images_list.length; i++) {
+                    // if no link without href="" tag
+                    let href = (images_list[i].link == "" ? "":' href="'+images_list[i].link+'"');
+                    images_div += '<a'+href+' class="hcg-slides animated"'+(i === 0 ? ' style="display:block"':'')+'>'+
+                                    '<img src="'+images_list[i].url+'" alt="'+images_list[i].name+'">'+
+                                 '</a>';
+                }
+                slider_id.querySelector(".hcg-slider-body").innerHTML = images_div;
+                let slide_index = 0;
+            
+                let images = slider_id.querySelectorAll(".hcg-slides");
+                function showSlides() {
+                    if (slide_index > images.length-1) {
+                        slide_index = 0;
+                    }
+                    if (slide_index < 0) {
+                        slide_index = images.length-1;
+                    }
+                    for (let i = 0; i < images.length; i++) {
+                        images[i].style.display = "none";
+                        if (i == slide_index) {
+                            images[i].style.display = "block";
+                        }
+                    }
+                }
+            
+                setInterval(function(){
+                    slide_index++;
+                    showSlides();
+                }, 5000);
+            
+            })();
+            </script>
+
+<h1>HOT GAMES</h1>
+     
+
+    <div class="boxg1">
+        <div class="inner_boxg1">
+        <h1>God Of War</h1>
+        <p>Will Kratos and Atreus be bound by fate, or take control of their destiny?
+             Watch the new God of War Ragnarök story trailer, revealed during State of Play.</p>
+             <video width="320" height="240" autoplay muted>
+                <source src="gow.mp4">
+              </video>
+    </div>
+
+    <div class="boxg2">
+        <div class="inner_boxg2">
+        <h1>Marvel's Spider-Man 2</h1>
+        <p>Venom enters the next chapter in the Marvel’s Spider-Man story when Marvel's Spider-Man 2 hits PS5 in 2023</p>
+             <video width="320" height="240" autoplay muted>
+                <source src="spiderman.mp4">
+              </video>
+    </div>
+    
+    <div class="boxg3">
+        <div class="inner_boxg3">
+        <h1>Tekken 8</h1>
+        <p>Tekken is back! From popping muscles to rain-lashed faces, the Tekken 8 trailer delivers fearsome (yet gorgeous) fighting.</p>
+             <video width="320" height="240" autoplay muted>
+                <source src="tekken.mp4">
+              </video>
+    </div>
+
+    -------NINTENDO--------
+
+    <br/>
+
+    <div class="boxn1">
+        <div class="inner_boxn1">
+        <h1>Mario Kart 9 Deluxe</h1>
+        <p>Mario Kart 8 Deluxe is still a gorgeous game and the overhauled Battle mode is a great reason to pick it up.</p>
+             <video width="320" height="240" autoplay muted>
+                <source src="mario.mp4">
+              </video>
+    </div>
+
+    <div class="boxn2">
+        <div class="inner_boxn2">
+        <h1>Animal Crossing</h1>
+        <p>Escape to a deserted island and create your own paradise as you explore, create, and customize in
+             the Animal Crossing: New Horizons game. Your island getaway has a wealth of natural resources that c
+             an be used to craft everything from tools to creature comforts. You can hunt down insects at the crack of dawn, decorate your paradise throughout the day, or enjoy sunset on the beach while fishing in the ocean. The time of day and season match real life, so each day on your island is a chance to check in and find new surprises all year round.</p>
+             <video width="320" height="240" autoplay muted>
+                <source src="ac.mp4">
+              </video>
+    </div>
+
+    <div class="boxn3">
+        <div class="inner_boxn3">
+        <h1>Super Smash Bros</h1>
+        <p>Super Smash Bros. Ultimate is Smash Bros. done right, and done bigger than ever before.</p>
+             <video width="320" height="240" autoplay muted>
+                <source src="supersmash.mp4">
+              </video>
+    </div>
+
+
+
+    -------MOBILE--------
+
+    <div class="boxm1">
+        <div class="inner_boxm1">
+        <h1>Mobile Legends</h1>
+        <p>Join your friends in Mobile Legends: Bang Bang, the brand new 5v5 MOBA showdown, and fight against real players! </p>
+             <video width="320" height="240" autoplay muted>
+                <source src="ml.mp4">
+              </video>
+    </div>
+
+    <div class="boxm2">
+        <div class="inner_boxm2">
+        <h1>Call of Duty Mobile</h1>
+        <p>Experience the thrill of Call of Duty on the go. Play as iconic characters in battle royale and multiplayer in our best fps free mobile game.</p>
+             <video width="320" height="240" autoplay muted>
+                <source src="codm.mp4">
+              </video>
+    </div>
+
+    <div class="boxm3">
+        <div class="inner_boxm3">
+        <h1>Clash of Clans</h1>
+        <p>Join the international fray that is Clash of Clans. Customize your village, build an army and crush your opponents.</p>
+             <video width="320" height="240" autoplay muted>
+                <source src="coc.mp4">
+              </video>
+    </div>
+
+
+            </body>
+            </html>
